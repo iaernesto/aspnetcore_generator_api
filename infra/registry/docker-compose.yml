@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  my-registry:
+    image: registry:2.6.1
+    volumes:
+      - registry:/var/lib/registry
+    ports:
+      - "55000:5000"
+# the restart ensure docker-compose is always running        
+    restart: unless-stopped  
+
+volumes:
+  registry:  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

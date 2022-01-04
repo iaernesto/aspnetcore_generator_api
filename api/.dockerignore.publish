@@ -1,0 +1,4 @@
+# This file was created to use runtime image and run a dll
+
+*
+!bin/Debug/netcoreapp2.1/publish
