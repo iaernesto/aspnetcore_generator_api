@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  generator:
+    image: my-registry:55000/gen:ci-8
+    ports:
+      - "8080:80"
+  mail:
+    image: mailhog/mailhog
+    ports:
+      - "8025:8025"
+  integration:
+# We created before the image running the Dockerfile: docker build -t my-registry:55000/gen:integration-8 .  
+# and we can see the image with docker images, then we add it below:
+    image: my-registry:55000/gen:integration-8
+    build: .  
+
+
+
+
+
+        
